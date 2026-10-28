@@ -1,0 +1,28 @@
+{
+  "paper_title": "Estimating Operator Fatigue During Manual Assembly with a Recursive State-Space Model of Wearable Eye-Tracking Signals",
+  "origin": "Extracted from the study toolkit; paper_ssm.py and paper_bundle.py preserved byte for byte.",
+  "source_files": {
+    "paper_ssm.py": "822466c6be3f6ccf4febfd835927c3a97383f2cc4ea942d9882e2b3347a33733",
+    "paper_bundle.py": "db7c151e0bb414719a46b79e49ce457b8e805c726ae6668721af8c27e8333b96"
+  },
+  "analyses": [
+    "reference",
+    "context_only",
+    "observed_only_supervision",
+    "online_both_048",
+    "initial_state_temporal_context_no_ocular"
+  ],
+  "data_sha256": "ff5f537bc54f9b1ba2c031594acc3c8cdb792b9601c5e267e42dd664f3ced7c0",
+  "artifact_configuration": "config/artifacts.json",
+  "license": "MIT",
+  "license_scope": [
+    "standalone code",
+    "extracted feature dataset",
+    "trained model artifacts"
+  ],
+  "upstream_developers": [
+    "Leonardo Venturoso",
+    "Isabella Soraruf"
+  ],
+  "additional_comparator": "last-available SSS with the same post-prediction feedback schedule"
+}

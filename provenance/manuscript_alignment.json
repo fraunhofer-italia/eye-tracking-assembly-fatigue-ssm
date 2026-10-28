@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "python": "3.11.13",
+  "sklearn": "1.8.0",
+  "numpy": "2.4.6",
+  "pandas": "3.0.2",
+  "code_sha256": "822466c6be3f6ccf4febfd835927c3a97383f2cc4ea942d9882e2b3347a33733",
+  "runner_sha256": "a536761083946be0e6a9256ec37eca77145fd8418950447c2f8bb74e80747fb3",
+  "dataset_sha256": "ff5f537bc54f9b1ba2c031594acc3c8cdb792b9601c5e267e42dd664f3ced7c0",
+  "audit_script_sha256": "8fc12e8095e91a6701143e2f554bb2188953d11d25451c95156ab647acadccd5",
+  "manuscript_sources_sha256": {
+    "manuscript.tex": "cb2d3418aeac7e8d46506aa29fd081684b92b7882204fe871103789ff53d5d50",
+    "methods.tex": "4800340bc9acecce802595cb265122a1bd754feb400a0a01f2af8ee2f8e44bcb",
+    "model_settings.tex": "ec41a7248cc7845d2763826420359017b8d493f1d0b959d55215d772a8177559",
+    "results.tex": "faefef076734942a16f6838674f723dc9f96ff68c54a9def7bad7ef2505b7667"
+  },
+  "fresh_fits": 20,
+  "trees_per_transition_model": 200,
+  "bootstrap_samples": 10000,
+  "analyses": [
+    "reference",
+    "context_only",
+    "observed_only_supervision",
+    "online_both_048"
+  ],
+  "all_saved_prediction_fields_match": true,
+  "max_absolute_prediction_table_difference": 8.881784197001252e-16,
+  "independent_equation_max_probability_difference": 1.1102230246251565e-16,
+  "all_five_folds_pass_label_disclosure_checks": true,
+  "label_disclosure_checks": {
+    "blind_without_later_labels": true,
+    "feedback_without_unrevealed_labels": true,
+    "feedback_only_affects_subsequent_predictions": true,
+    "offset_satisfies_penalized_loss_stationarity": true
+  },
+  "reported_primary_results_table_matches": true,
+  "saved_fold_and_pooled_metrics_match": true,
+  "saved_bootstrap_intervals_match": true,
+  "disclosed_feedback_ratings": 128,
+  "data_audit": {
+    "dataset": "src/outputs_multiscale/dataset_eyetracking_5min.csv",
+    "dataset_sha256": "ff5f537bc54f9b1ba2c031594acc3c8cdb792b9601c5e267e42dd664f3ced7c0",
+    "python": "3.11.13",
+    "rows": 15749,
+    "participants": 22,
+    "sessions": 44,
+    "exact_evaluation_ratings": 504,
+    "positive_sss_ge4": 208,
+    "exact_sss_all_integer": true,
+    "reference_sequence_nodes": 563,
+    "support_nodes": 15,
+    "reference_perclos_policy": "morning q95 and morning closure subtraction for both sessions",
+    "geometry_reference_policy": "each participant-session initialization feature vector",
+    "initialization_source_counts": {
+      "Baseline_M_SSS": 22,
+      "mean(SSS_13:SSS_18)": 21,
+      "SSS_19": 1
+    },
+    "fallback_initializations": [
+      {
+        "participant_id": 3,
+        "session": "afternoon",
+        "SSS_source": "SSS_19",
+        "prediction_time": 1935.301577043,
+        "assembly_start_time": 1633.998123859
+      }
+    ],
+    "noninteger_afternoon_initializations": 15,
+    "morning_reference_duration_min_s": 74.52400000000011,
+    "morning_reference_duration_max_s": 182.19900006399996,
+    "morning_reference_duration_median_s": 131.31650000000002,
+    "initialization_windows_shorter_than_150s": 17,
+    "evaluation_windows_shorter_than_150s": 0,
+    "exact_geometry_all_seven_missing": 0,
+    "exact_geometry_any_missing": 0,
+    "exact_perclos_missing": 0,
+    "training_support_targets_finite": 15,
+    "limitations": [
+      "Raw Neon recordings and questionnaire source files are absent; the feature table was audited, not rebuilt.",
+      "Afternoon starting states generally average SSS_13 through SSS_18; they are not single final ratings.",
+      "Participant 3 afternoon begins at the first assembly rating, which is excluded from evaluation.",
+      "The existing experiment implementation is documented as an independent reconstruction of the draft analysis.",
+      "No baseline-free, streaming, or robot-assistance experiment is evaluated here."
+    ]
+  },
+  "scope": "Current revised manuscript, not proof of identity with the legacy draft implementation.",
+  "limitations": [
+    "Starts from archived extracted features; no raw-data rebuild.",
+    "Protocol facts not encoded in the feature table cannot be independently established.",
+    "Trained-model export/loading is not implemented or tested by this audit.",
+    "Existing comments describing every initialization as pre-assembly are inaccurate for the documented fallback."
+  ]
+}

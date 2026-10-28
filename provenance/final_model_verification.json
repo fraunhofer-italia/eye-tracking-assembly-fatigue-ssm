@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "update": "Final offline all-participant model and organization-link configuration; original estimator sources preserved.",
+  "destinations": {
+    "github": "https://github.com/fraunhofer-italia",
+    "huggingface": "https://huggingface.co/fhi",
+    "publication_status": "local_preparation"
+  },
+  "final_model_verification": {
+    "status": "passed",
+    "model_role": "final_offline_inference_all_participants",
+    "training_participants": 22,
+    "training_sessions": 44,
+    "sequence_points": 563,
+    "initializations": 44,
+    "observed_endpoints": 504,
+    "support_points": 15,
+    "serialization_roundtrip_exact": true,
+    "fresh_process_predictions_identical": true,
+    "blind_inference_unchanged_without_noninitial_sss": true,
+    "independent_test_performance": null
+  },
+  "cross_validation_regression": {
+    "status": "passed",
+    "command": "reproduce",
+    "analyses": [
+      "reference",
+      "online_both_048",
+      "context_only",
+      "observed_only_supervision"
+    ],
+    "python": "3.11.13",
+    "numpy": "2.4.6",
+    "pandas": "3.0.2",
+    "sklearn": "1.8.0",
+    "rows_per_analysis": {
+      "reference": 504,
+      "online_both_048": 504,
+      "context_only": 504,
+      "observed_only_supervision": 504
+    },
+    "aggregate_metrics_and_bootstrap_match": true,
+    "comparison_atol_rtol": 1e-12,
+    "fresh_vs_saved_model_predictions_match": true,
+    "always_positive_F1": 0.5842696629213483,
+    "reference_pooled_F1": 0.7129629629629629,
+    "feedback_pooled_F1": 0.8171021377672208
+  },
+  "files_sha256": {
+    "src/fatigue_study.py": "94f61bb6dec3668b9a2d4e85e9c192c8a428ff65777b2d75b56c3a5b919bcd57",
+    "src/paper_ssm.py": "822466c6be3f6ccf4febfd835927c3a97383f2cc4ea942d9882e2b3347a33733",
+    "src/paper_bundle.py": "db7c151e0bb414719a46b79e49ce457b8e805c726ae6668721af8c27e8333b96",
+    "config/artifacts.json": "93bab9198a909d8cac1cab5ecc696994a00abad9058fbb0aade93eeff6d29d79",
+    "config/final_model_manifest.json": "54847cb817495ba7e522846da976048334fa833095f7542d0be7cc0e5c947805"
+  },
+  "remote_upload_performed": false
+}

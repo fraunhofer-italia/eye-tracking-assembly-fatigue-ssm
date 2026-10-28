@@ -1,0 +1,43 @@
+{
+  "dataset_sha256": "ff5f537bc54f9b1ba2c031594acc3c8cdb792b9601c5e267e42dd664f3ced7c0",
+  "model_code_sha256": "822466c6be3f6ccf4febfd835927c3a97383f2cc4ea942d9882e2b3347a33733",
+  "matched_evaluation_endpoints": 504,
+  "disclosures": 128,
+  "persistence_rule": "Initial session SSS, then first/fifth/ninth assembly SSS; update after prediction; threshold >= 4",
+  "persistence_pooled_F1": 0.8186274509803921,
+  "persistence_accuracy": 0.8531746031746031,
+  "persistence_ROC_AUC": 0.9189838877338878,
+  "persistence_ranking_score": "Last available continuous/ordinal SSS, not the thresholded class or a calibrated probability",
+  "persistence_confusion_counts": {
+    "TN": 263,
+    "FP": 33,
+    "FN": 41,
+    "TP": 167
+  },
+  "feedback_model_pooled_F1": 0.8171021377672208,
+  "feedback_model_accuracy": 0.8472222222222222,
+  "feedback_model_ROC_AUC": 0.8940845893970895,
+  "feedback_model_vs_persistence": {
+    "reference": "online_both_048",
+    "comparison": "sss_persistence_feedback",
+    "participants": 22,
+    "n_boot": 10000,
+    "reference_F1": 0.8171021377672208,
+    "comparison_F1": 0.8186274509803921,
+    "delta_F1": -0.0015253132131712865,
+    "CI95_low": -0.03904988852505615,
+    "CI95_high": 0.032791496258460874
+  },
+  "reference_vs_no_ocular_control": {
+    "reference": "reference",
+    "comparison": "initial_state_temporal_context_no_ocular",
+    "participants": 22,
+    "n_boot": 10000,
+    "reference_F1": 0.7129629629629629,
+    "comparison_F1": 0.6593886462882096,
+    "delta_F1": 0.05357431667475332,
+    "CI95_low": -0.04967918940578925,
+    "CI95_high": 0.15969469010682835
+  },
+  "interpretation": "No numerical F1 advantage for feedback model over persistence; this does not establish equivalence. The reference-minus-no-ocular-control interval includes zero."
+}

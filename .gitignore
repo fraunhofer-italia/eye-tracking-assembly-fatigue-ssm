@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+build/
+dist/
+.DS_Store
+artifacts/
+results/
+hf_upload/
+*.joblib
+*.tmp
+*.part

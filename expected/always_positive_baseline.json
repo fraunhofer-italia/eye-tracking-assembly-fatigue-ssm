@@ -1,0 +1,6 @@
+{
+  "method": "always-fatigued rule (no model fitting)",
+  "positive_prevalence": 0.4126984126984127,
+  "F1": 0.5842696629213483,
+  "n_exact_evaluation_rows": 504
+}

@@ -1,0 +1,130 @@
+{
+  "format": "fatigue-paper-offline-150s-300s-v1",
+  "model_role": "final_offline_inference_all_participants",
+  "artifact": {
+    "filename": "reference_all_participants.joblib",
+    "sha256": "4d1cf5d868457d07a410957755adc6b32fcf52c64ac2446a31dda604d9e8b2df",
+    "bytes": 90184
+  },
+  "training": {
+    "model_role": "final_offline_inference_all_participants",
+    "train_participants": [
+      "1",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "2",
+      "20",
+      "21",
+      "22",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "test_participants": [],
+    "training_sequence_rows": 563,
+    "observed_training_endpoints": 504,
+    "initialization_references": 44,
+    "support_points": 15,
+    "dataset_sha256": "ff5f537bc54f9b1ba2c031594acc3c8cdb792b9601c5e267e42dd664f3ced7c0",
+    "model_source_sha256": "822466c6be3f6ccf4febfd835927c3a97383f2cc4ea942d9882e2b3347a33733"
+  },
+  "configuration": {
+    "name": "reference",
+    "window_s": 150,
+    "cadence_s": 300,
+    "obs": "fsan",
+    "transition": "extra_trees",
+    "use_perclos": true,
+    "fusion": "both",
+    "known_initial": true,
+    "cal": "session_time",
+    "interpolated_training": true,
+    "fatigue_threshold": 4.0,
+    "feedback": "none",
+    "feedback_ordinals": [
+      0,
+      4,
+      8
+    ],
+    "model_type": "state_space"
+  },
+  "feature_order": {
+    "ocular": [
+      "geo_eyelid aperture left [mm]_mean_delta",
+      "geo_eyelid aperture left [mm]_std_logratio",
+      "geo_eyelid aperture right [mm]_mean_delta",
+      "geo_eyelid aperture right [mm]_std_logratio",
+      "geo_vergence_deg_mean_delta",
+      "geo_vergence_deg_std_delta",
+      "eye_pose_std_delta"
+    ],
+    "transition": [
+      "previous_standardized_state",
+      "relative_eyelid_closure"
+    ],
+    "classifier": [
+      "latent",
+      "afternoon",
+      "latent*afternoon",
+      "elapsed_minutes",
+      "latent*elapsed_minutes"
+    ]
+  },
+  "fixed_settings": {
+    "initial_variance": 0.0001,
+    "residual_variance_floor": 0.0001,
+    "normalization_epsilon": 0.001,
+    "feedback_offset_l2": 0.1,
+    "seed": 42
+  },
+  "python": "3.11.13",
+  "libraries": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.2",
+    "scipy": "1.17.1",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "sources_sha256": {
+    "fatigue_study.py": "94f61bb6dec3668b9a2d4e85e9c192c8a428ff65777b2d75b56c3a5b919bcd57",
+    "paper_ssm.py": "822466c6be3f6ccf4febfd835927c3a97383f2cc4ea942d9882e2b3347a33733",
+    "paper_bundle.py": "db7c151e0bb414719a46b79e49ce457b8e805c726ae6668721af8c27e8333b96"
+  },
+  "learned_parameters": {
+    "target_mean": 3.1316597114906024,
+    "target_std": 1.6516928645257651,
+    "Q": 0.19398709158340155,
+    "R": 0.6560881072802716,
+    "observation_training_points": 519,
+    "transition_training_pairs": 519
+  },
+  "serialization_roundtrip_exact": true,
+  "prediction_fingerprints": {
+    "none": {
+      "latent": "99cc55578a5930e689f857ea8e789b734d72ec4606d894c66b6b09ebd2ced587",
+      "latent_variance": "70b4a87857458def8983be9821aafe00550ded65eb9b553b7a579a1afabe4aa8",
+      "probability": "1d7a862994f37a4bc54f9f9d4a25f985a3df62688dcdfdeaa0bdd5907c939702",
+      "y_pred_sss": "7d01040f0190f0553dc934c6e3eb24053e76f210255fcda59dcf8990ffcb8cf8"
+    },
+    "both": {
+      "latent": "4bcf878efb48d8c3ca07391765305e90cd065c6f33d574efd15baf1fbffb6da4",
+      "latent_variance": "a55576bdd220afb3c095663d7e932bf7a65bca2587211b73edf7bff74a89fed0",
+      "probability": "4b855a658256e25cda0af195c1bdb2dc26c9287db6f2ab7409c7d517318ceebf",
+      "y_pred_sss": "8497cfe5e5fabf2f21fee6c06e75d9157dda0ab47a9639e8b4f371a3964b20bc"
+    }
+  },
+  "independent_test_performance": null,
+  "performance_note": "Fit on all 22 participants. Paper cross-validation scores belong to the five held-out fits; no independent test score is assigned to this final fit."
+}

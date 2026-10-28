@@ -1,0 +1,28 @@
+{
+  "code": "paper_ssm_v1",
+  "code_sha256": "822466c6be3f6ccf4febfd835927c3a97383f2cc4ea942d9882e2b3347a33733",
+  "runner_sha256": "a536761083946be0e6a9256ec37eca77145fd8418950447c2f8bb74e80747fb3",
+  "python": "3.11.13",
+  "numpy": "2.4.6",
+  "pandas": "3.0.2",
+  "sklearn": "1.8.0",
+  "dataset_filename": "dataset_eyetracking_5min.csv",
+  "dataset_sha256": "ff5f537bc54f9b1ba2c031594acc3c8cdb792b9601c5e267e42dd664f3ced7c0",
+  "suite": [
+    "reference",
+    "ablation",
+    "online",
+    "threshold"
+  ],
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "n_trees": 200,
+  "method": "fixed folds; SSS-aligned rounded cadence; training-only interpolation; held-out blind inference",
+  "reference_window_s": 150,
+  "reference_cadence_s": 300
+}

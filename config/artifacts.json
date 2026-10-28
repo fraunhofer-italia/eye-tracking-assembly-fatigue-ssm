@@ -1,0 +1,100 @@
+{
+  "format_version": 1,
+  "huggingface": {
+    "dataset": {
+      "repo_id": "fhi/operator-fatigue-wearable-eye-tracking",
+      "revision": "a66b6a4e022931012b8529abd87d51388abe6027",
+      "organization_url": "https://huggingface.co/fhi"
+    },
+    "model": {
+      "repo_id": "fhi/operator-fatigue-wearable-eye-tracking",
+      "revision": "472a256462379469abc531b0e1a4f14abcd46b5c",
+      "organization_url": "https://huggingface.co/fhi"
+    }
+  },
+  "files": [
+    {
+      "kind": "dataset",
+      "path": "artifacts/dataset/dataset_eyetracking_5min.csv",
+      "filename": "dataset_eyetracking_5min.csv",
+      "bytes": 172474471,
+      "sha256": "ff5f537bc54f9b1ba2c031594acc3c8cdb792b9601c5e267e42dd664f3ced7c0"
+    },
+    {
+      "kind": "model",
+      "path": "artifacts/model/manifest.json",
+      "filename": "manifest.json",
+      "bytes": 7601,
+      "sha256": "7a99be75bf72d046aa585345dcdc6e22c0e20dce1fcebf8740dd56b5d6940bec"
+    },
+    {
+      "kind": "model",
+      "path": "artifacts/model/reference_fold_1.joblib",
+      "filename": "reference_fold_1.joblib",
+      "bytes": 80342,
+      "sha256": "0b1502a20cf9b11f58d9da2b7fe55f9315da28a8c7d0b12197bf23518ecf51c0"
+    },
+    {
+      "kind": "model",
+      "path": "artifacts/model/reference_fold_2.joblib",
+      "filename": "reference_fold_2.joblib",
+      "bytes": 81507,
+      "sha256": "4c6e3c917924d2b69f531770fea88006dbf4ad17a2ac42f26b5439d95a4f94b0"
+    },
+    {
+      "kind": "model",
+      "path": "artifacts/model/reference_fold_3.joblib",
+      "filename": "reference_fold_3.joblib",
+      "bytes": 80117,
+      "sha256": "2708ef7a4dedc101c226d8fcc586d76b5f0755f05afdac351aa57600c59e2368"
+    },
+    {
+      "kind": "model",
+      "path": "artifacts/model/reference_fold_4.joblib",
+      "filename": "reference_fold_4.joblib",
+      "bytes": 84085,
+      "sha256": "37a0c0568e1c2bc0c58c66398654dd958e21de2a0b6258b4f67d9d6267d08b64"
+    },
+    {
+      "kind": "model",
+      "path": "artifacts/model/reference_fold_5.joblib",
+      "filename": "reference_fold_5.joblib",
+      "bytes": 85908,
+      "sha256": "885973e3eee8be77b3d1982849eca73b2d675abe7f422e587cf0c4ec6932799f"
+    },
+    {
+      "kind": "model",
+      "path": "artifacts/model/verification.json",
+      "filename": "verification.json",
+      "bytes": 373,
+      "sha256": "8f578a56e65d4481555e2868deffea09a886f26951a59a56858cac9a29cccb04"
+    },
+    {
+      "kind": "model",
+      "path": "artifacts/model/reference_all_participants.joblib",
+      "filename": "reference_all_participants.joblib",
+      "bytes": 90184,
+      "sha256": "4d1cf5d868457d07a410957755adc6b32fcf52c64ac2446a31dda604d9e8b2df"
+    },
+    {
+      "kind": "model",
+      "path": "artifacts/model/reference_all_participants.manifest.json",
+      "filename": "reference_all_participants.manifest.json",
+      "bytes": 3951,
+      "sha256": "54847cb817495ba7e522846da976048334fa833095f7542d0be7cc0e5c947805"
+    },
+    {
+      "kind": "model",
+      "path": "artifacts/model/reference_all_participants.verification.json",
+      "filename": "reference_all_participants.verification.json",
+      "bytes": 435,
+      "sha256": "416e8c233532219e12e2e332c23e6fcc0569f5e93dc0bb9292459753f05cb449"
+    }
+  ],
+  "destinations": {
+    "publication_status": "uploaded_private",
+    "github_organization": "https://github.com/fraunhofer-italia",
+    "huggingface_organization": "https://huggingface.co/fhi",
+    "github_repository": "https://github.com/fraunhofer-italia/operator-fatigue-wearable-eye-tracking"
+  }
+}

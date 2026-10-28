@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "operator-fatigue-wearable-eye-tracking"
+version = "0.1.0"
+description = "Offline reproduction of operator sleepiness estimation during manual assembly"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dependencies = [
+  "numpy==2.4.6",
+  "pandas==3.0.2",
+  "scipy==1.17.1",
+  "scikit-learn==1.8.0",
+  "joblib==1.5.3",
+]
+
+[project.scripts]
+fatigue-study = "fatigue_study:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["paper_ssm", "paper_bundle", "fatigue_study"]

@@ -1,0 +1,133 @@
+{
+  "status": "passed",
+  "date": "2026-10-28",
+  "environment": "Python 3.11.13 with pinned scientific packages; independent standalone source tree.",
+  "commands": {
+    "evaluate": {
+      "status": "passed",
+      "command": "evaluate",
+      "analyses": [
+        "reference",
+        "online_both_048"
+      ],
+      "python": "3.11.13",
+      "numpy": "2.4.6",
+      "pandas": "3.0.2",
+      "sklearn": "1.8.0",
+      "rows_per_analysis": {
+        "reference": 504,
+        "online_both_048": 504
+      },
+      "aggregate_metrics_and_bootstrap_match": true,
+      "comparison_atol_rtol": 1e-12,
+      "fresh_vs_saved_model_predictions_match": false,
+      "always_positive_F1": 0.5842696629213483,
+      "persistence_comparator_verified": true,
+      "persistence_pooled_F1": 0.8186274509803921,
+      "reference_pooled_F1": 0.7129629629629629,
+      "feedback_pooled_F1": 0.8171021377672208
+    },
+    "reproduce --check-models": {
+      "status": "passed",
+      "command": "reproduce",
+      "analyses": [
+        "reference",
+        "online_both_048",
+        "context_only",
+        "observed_only_supervision",
+        "initial_state_temporal_context_no_ocular"
+      ],
+      "python": "3.11.13",
+      "numpy": "2.4.6",
+      "pandas": "3.0.2",
+      "sklearn": "1.8.0",
+      "rows_per_analysis": {
+        "reference": 504,
+        "online_both_048": 504,
+        "context_only": 504,
+        "observed_only_supervision": 504,
+        "initial_state_temporal_context_no_ocular": 504
+      },
+      "aggregate_metrics_and_bootstrap_match": true,
+      "comparison_atol_rtol": 1e-12,
+      "fresh_vs_saved_model_predictions_match": true,
+      "always_positive_F1": 0.5842696629213483,
+      "persistence_comparator_verified": true,
+      "persistence_pooled_F1": 0.8186274509803921,
+      "reference_pooled_F1": 0.7129629629629629,
+      "feedback_pooled_F1": 0.8171021377672208
+    },
+    "export": {
+      "status": "passed",
+      "command": "export",
+      "analyses": [
+        "reference",
+        "online_both_048"
+      ],
+      "python": "3.11.13",
+      "numpy": "2.4.6",
+      "pandas": "3.0.2",
+      "sklearn": "1.8.0",
+      "rows_per_analysis": {
+        "reference": 504,
+        "online_both_048": 504
+      },
+      "aggregate_metrics_and_bootstrap_match": true,
+      "comparison_atol_rtol": 1e-12,
+      "fresh_vs_saved_model_predictions_match": false,
+      "always_positive_F1": 0.5842696629213483,
+      "persistence_comparator_verified": true,
+      "persistence_pooled_F1": 0.8186274509803921,
+      "reference_pooled_F1": 0.7129629629629629,
+      "feedback_pooled_F1": 0.8171021377672208
+    },
+    "evaluate exported models in fresh process": {
+      "status": "passed",
+      "command": "evaluate",
+      "analyses": [
+        "reference",
+        "online_both_048"
+      ],
+      "python": "3.11.13",
+      "numpy": "2.4.6",
+      "pandas": "3.0.2",
+      "sklearn": "1.8.0",
+      "rows_per_analysis": {
+        "reference": 504,
+        "online_both_048": 504
+      },
+      "aggregate_metrics_and_bootstrap_match": true,
+      "comparison_atol_rtol": 1e-12,
+      "fresh_vs_saved_model_predictions_match": false,
+      "always_positive_F1": 0.5842696629213483,
+      "persistence_comparator_verified": true,
+      "persistence_pooled_F1": 0.8186274509803921,
+      "reference_pooled_F1": 0.7129629629629629,
+      "feedback_pooled_F1": 0.8171021377672208
+    },
+    "verify-final": {
+      "status": "passed",
+      "model_role": "final_offline_inference_all_participants",
+      "training_participants": 22,
+      "training_sessions": 44,
+      "sequence_points": 563,
+      "initializations": 44,
+      "observed_endpoints": 504,
+      "support_points": 15,
+      "serialization_roundtrip_exact": true,
+      "fresh_process_predictions_identical": true,
+      "blind_inference_unchanged_without_noninitial_sss": true,
+      "independent_test_performance": null
+    }
+  },
+  "artifact_checksums_verified": true,
+  "huggingface_pinned_revisions_verified": true,
+  "huggingface_repositories_private": true,
+  "files_sha256": {
+    "src/fatigue_study.py": "c8fd6fa70f0733cab22519fc714015f524aa7e8cb8ded0d1f6c6743fc60ed290",
+    "src/paper_ssm.py": "822466c6be3f6ccf4febfd835927c3a97383f2cc4ea942d9882e2b3347a33733",
+    "src/paper_bundle.py": "db7c151e0bb414719a46b79e49ce457b8e805c726ae6668721af8c27e8333b96",
+    "requirements.txt": "3f32266456107b56af38b12a7d45623595708626680049adba2c303f922e3d73",
+    "config/artifacts.json": "b8a0c97d9ad7df10ec151452e21aaee6fabee0d53c9ae443a0889b00e1e1a0b0"
+  }
+}
