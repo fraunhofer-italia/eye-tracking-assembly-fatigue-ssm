@@ -1,6 +1,6 @@
 ---
 license: mit
-pretty_name: "Operator Fatigue During Manual Assembly — Extracted Eye-Tracking Features"
+pretty_name: "Eye Tracking for Assembly Fatigue: SSM — Processed Features"
 tags:
   - wearable-eye-tracking
   - manual-assembly
@@ -9,7 +9,7 @@ tags:
   - timeseries
 ---
 
-# Operator fatigue: extracted wearable eye-tracking features
+# Eye Tracking for Assembly Fatigue: SSM — Dataset
 
 Dataset accompanying *Estimating Operator Fatigue During Manual Assembly with a
 Recursive State-Space Model of Wearable Eye-Tracking Signals*.
@@ -28,14 +28,14 @@ The dataset retains unused auxiliary columns to preserve the original artifact.
 
 ## Reproduction
 
-Use the companion `operator-fatigue-wearable-eye-tracking` code package and
+Use the companion `eye-tracking-assembly-fatigue-ssm` code package and
 its recorded dependencies, folds and preprocessing conventions. The source CSV
 SHA-256 is
 `ff5f537bc54f9b1ba2c031594acc3c8cdb792b9601c5e267e42dd664f3ced7c0`.
 
-The [model repository](https://huggingface.co/fhi/operator-fatigue-wearable-eye-tracking)
+The [model repository](https://huggingface.co/fhi/eye-tracking-assembly-fatigue-ssm)
 contains the fitted models and Python modules needed for loading them. The full
-code is available in the [GitHub repository](https://github.com/fraunhofer-italia/operator-fatigue-wearable-eye-tracking).
+code is available in the [GitHub repository](https://github.com/fraunhofer-italia/eye-tracking-assembly-fatigue-ssm).
 
 ## Scope
 

@@ -1,6 +1,6 @@
 # Artifact release
 
-Code is published at https://github.com/fraunhofer-italia/operator-fatigue-wearable-eye-tracking.
+Code is published at https://github.com/fraunhofer-italia/eye-tracking-assembly-fatigue-ssm.
 The dataset and six fitted models are hosted separately on Hugging Face; their
 repository IDs, pinned revisions and checksums are in `config/artifacts.json`.
 All standalone release materials use the MIT License.

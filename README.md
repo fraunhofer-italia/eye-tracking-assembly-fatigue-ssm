@@ -1,4 +1,4 @@
-# Operator fatigue estimation with wearable eye tracking
+# Eye Tracking for Assembly Fatigue: SSM
 
 Code for *Estimating Operator Fatigue During Manual Assembly with a Recursive
 State-Space Model of Wearable Eye-Tracking Signals*.
@@ -19,8 +19,8 @@ python -m pip install -e .
 python scripts/download_artifacts.py
 ```
 
-[Dataset](https://huggingface.co/datasets/fhi/operator-fatigue-wearable-eye-tracking)
-and [trained models](https://huggingface.co/fhi/operator-fatigue-wearable-eye-tracking)
+[Dataset](https://huggingface.co/datasets/fhi/eye-tracking-assembly-fatigue-ssm)
+and [trained models](https://huggingface.co/fhi/eye-tracking-assembly-fatigue-ssm)
 are hosted on Hugging Face. Downloads use pinned revisions and verify checksums.
 The HF repositories currently require access: set `HF_TOKEN` with permission to
 download the artifacts.

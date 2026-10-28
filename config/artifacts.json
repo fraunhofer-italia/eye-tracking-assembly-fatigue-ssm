@@ -2,13 +2,13 @@
   "format_version": 1,
   "huggingface": {
     "dataset": {
-      "repo_id": "fhi/operator-fatigue-wearable-eye-tracking",
-      "revision": "a66b6a4e022931012b8529abd87d51388abe6027",
+      "repo_id": "fhi/eye-tracking-assembly-fatigue-ssm",
+      "revision": "922bab97ca1c21e4cd395bbacb1f3bada48e9636",
       "organization_url": "https://huggingface.co/fhi"
     },
     "model": {
-      "repo_id": "fhi/operator-fatigue-wearable-eye-tracking",
-      "revision": "472a256462379469abc531b0e1a4f14abcd46b5c",
+      "repo_id": "fhi/eye-tracking-assembly-fatigue-ssm",
+      "revision": "1a54292088fdb55336b92ac9a99351f7fdc91772",
       "organization_url": "https://huggingface.co/fhi"
     }
   },
@@ -95,6 +95,6 @@
     "publication_status": "uploaded_private",
     "github_organization": "https://github.com/fraunhofer-italia",
     "huggingface_organization": "https://huggingface.co/fhi",
-    "github_repository": "https://github.com/fraunhofer-italia/operator-fatigue-wearable-eye-tracking"
+    "github_repository": "https://github.com/fraunhofer-italia/eye-tracking-assembly-fatigue-ssm"
   }
 }

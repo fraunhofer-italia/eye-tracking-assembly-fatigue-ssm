@@ -128,6 +128,27 @@
     "src/paper_ssm.py": "822466c6be3f6ccf4febfd835927c3a97383f2cc4ea942d9882e2b3347a33733",
     "src/paper_bundle.py": "db7c151e0bb414719a46b79e49ce457b8e805c726ae6668721af8c27e8333b96",
     "requirements.txt": "3f32266456107b56af38b12a7d45623595708626680049adba2c303f922e3d73",
-    "config/artifacts.json": "b8a0c97d9ad7df10ec151452e21aaee6fabee0d53c9ae443a0889b00e1e1a0b0"
+    "config/artifacts.json": "1b83f47e27b66aa10971d42285592225925d1082bd850a15bbeffd2bfaf40e2b"
+  },
+  "repository_rename": {
+    "date": "2026-10-28",
+    "name": "eye-tracking-assembly-fatigue-ssm",
+    "artifact_contents_changed": false,
+    "huggingface": {
+      "model": {
+        "old_repo_id": "fhi/operator-fatigue-wearable-eye-tracking",
+        "repo_id": "fhi/eye-tracking-assembly-fatigue-ssm",
+        "previous_revision": "472a256462379469abc531b0e1a4f14abcd46b5c",
+        "revision": "1a54292088fdb55336b92ac9a99351f7fdc91772",
+        "private": true
+      },
+      "dataset": {
+        "old_repo_id": "fhi/operator-fatigue-wearable-eye-tracking",
+        "repo_id": "fhi/eye-tracking-assembly-fatigue-ssm",
+        "previous_revision": "a66b6a4e022931012b8529abd87d51388abe6027",
+        "revision": "922bab97ca1c21e4cd395bbacb1f3bada48e9636",
+        "private": true
+      }
+    }
   }
 }

@@ -8,7 +8,7 @@ tags:
   - scikit-learn
 ---
 
-# Operator fatigue: offline recursive eye-tracking model
+# Eye Tracking for Assembly Fatigue: SSM
 
 Complete fitted models accompanying *Estimating Operator Fatigue During Manual
 Assembly with a Recursive State-Space Model of Wearable Eye-Tracking Signals*.
@@ -56,8 +56,8 @@ The same bundle supports `feedback="both"`: reveal the first, fifth and ninth
 eligible session ratings after their predictions, update state and session logit
 offset, and keep all fitted population parameters fixed.
 
-The [dataset repository](https://huggingface.co/datasets/fhi/operator-fatigue-wearable-eye-tracking)
-contains the extracted input features. The code is available on [GitHub](https://github.com/fraunhofer-italia/operator-fatigue-wearable-eye-tracking).
+The [dataset repository](https://huggingface.co/datasets/fhi/eye-tracking-assembly-fatigue-ssm)
+contains the extracted input features. The code is available on [GitHub](https://github.com/fraunhofer-italia/eye-tracking-assembly-fatigue-ssm).
 
 ## Cross-validation performance
 

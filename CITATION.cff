@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "Please cite the accompanying manuscript and the specific code, dataset, and model release used. Publication identifiers will be added when available."
-title: "Operator Fatigue During Manual Assembly: Wearable Eye-Tracking Reproduction Code"
+title: "Eye Tracking for Assembly Fatigue: SSM — Reproduction Code"
 type: software
 version: 0.1.0
 license: MIT
@@ -17,4 +17,4 @@ authors:
     given-names: Christoph
   - family-names: Todescato
     given-names: Marco
-repository-code: https://github.com/fraunhofer-italia/operator-fatigue-wearable-eye-tracking
+repository-code: https://github.com/fraunhofer-italia/eye-tracking-assembly-fatigue-ssm
