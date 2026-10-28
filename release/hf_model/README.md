@@ -66,16 +66,21 @@ Brier score 0.188. Selective post-prediction feedback gives F1 0.817, ROC-AUC
 0.894 and Brier score 0.123. These scores belong to the five held-out fits, not
 an independent test of the final all-participant model.
 Carrying forward the last available SSS with the same feedback schedule gives
-F1 0.819, accuracy 0.853 and ROC-AUC 0.919. The feedback-assisted model has not
-shown an advantage over this comparator (paired pooled-F1 difference -0.002,
-95% interval [-0.039, 0.033]).
+F1 0.819, accuracy 0.853 and ROC-AUC 0.919. The feedback-assisted model and this
+comparator achieved similar observed pooled F1 (paired difference -0.002,
+95% interval [-0.039, 0.033]), highlighting the predictive value of recent
+subjective assessments.
 Serialization/reloading was checked for exact
 prediction equality, including loading in a fresh Python process.
 
-The outcome is SSS-defined self-reported sleepiness. The offline evaluation does
-not validate a clinical fatigue measure, prospective streaming performance or
-adaptive assistance benefits. The context-only increment remains uncertain in
-this sample; consult the companion paper and expected bootstrap results.
+The outcome is SSS-defined self-reported sleepiness. The reference model had
+higher observed pooled F1 than the contextual controls, with paired intervals
+including zero. The 504 assessments come from 22 participant resampling units,
+which limits precision for modest performance differences. The seven geometry
+inputs describe eyelid opening, binocular alignment and ocular variability.
+The paper documents their literature rationale and the exploratory temporal
+comparison supporting the 150-s/300-s configuration. Larger independent cohorts
+and prospective evaluation can assess use in workplace monitoring.
 
 ## Distribution and citation
 

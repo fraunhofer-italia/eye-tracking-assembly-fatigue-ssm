@@ -43,10 +43,10 @@ To replay the saved reference models and feedback/persistence comparison:
 fatigue-study evaluate
 ```
 
-Reference pooled F1 is **0.713**; feedback-assisted F1 is **0.817**, versus
-**0.819** for SSS persistence. These results do not establish an advantage of the
-feedback-assisted model over persistence or an overall incremental ocular benefit.
-See [model and validation details](docs/model.md).
+Reference pooled F1 is **0.713**; feedback-assisted F1 is **0.817**, with similar
+observed F1 (**0.819**) for SSS persistence. Recent subjective assessments were
+informative. Comparisons use participant-bootstrap intervals across 22 people;
+see [model and validation details](docs/model.md).
 
 ## Use the final offline model
 

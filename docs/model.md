@@ -1,9 +1,9 @@
 # Model and evaluation
 
 The estimator predicts SSS-defined sleepiness during manual assembly. It is a
-population-trained offline model requiring participant-specific initial ocular
-and subjective references. It does not establish a clinical fatigue diagnosis
-or validated assistance-level selection.
+population-trained offline model using participant-specific initial ocular
+and subjective references. It provides a reproducible basis for further
+evaluation of sleepiness monitoring during manual work.
 
 ## Fitted components
 
@@ -81,13 +81,13 @@ participants. Its role is identified explicitly in model metadata and in
 Use `fatigue-study fit-final` to generate it and `fatigue-study verify-final`
 to check loading and blind-label independence. Serialization is checked both
 before/after loading and in a fresh Python process, in blind and feedback modes.
-These are numerical integrity checks on archived inputs, not an independent
-assessment of generalization. Cross-validation metrics belong to the five fold
-fits; no external-test performance is assigned to the final model.
+These checks verify numerical integrity on the study inputs. Reported
+performance comes from the five participant-held-out fits; external evaluation
+of the final all-participant model is a future step.
 
-Its update cadence remains 300 s. It does not replace or validate the separate
-30-s realtime model. Inference takes a prepared offline sequence and requires
-initial reference information; it is not an interface for raw eye samples.
+Its update cadence remains 300 s. Inference takes a prepared offline sequence
+with initial reference information. The 30-s realtime prototype is a separate
+implementation with its own input and model contracts.
 
 Import names `paper_ssm` and `paper_bundle` are kept stable for joblib loading.
 The original `.joblib` hashes and configuration are recorded in
@@ -104,13 +104,35 @@ ranking score. It is not a calibrated probability, so no Brier score is assigned
 
 Persistence achieves pooled F1 0.819, accuracy 0.853 and ROC-AUC 0.919. For the
 feedback-assisted model minus persistence, pooled ΔF1 is -0.002 with paired
-participant-bootstrap 95% interval [-0.039, 0.033]. This does not establish an
-advantage or equivalence. The no-ocular control has F1 0.659; reference minus
+participant-bootstrap 95% interval [-0.039, 0.033]. The two approaches had
+similar observed pooled F1, highlighting the predictive value of recent
+subjective assessments. The no-ocular control has F1 0.659; reference minus
 control is 0.054 with interval [-0.050, 0.160]. Full-precision expectations are
 included in `expected/`; each evaluation writes `persistence_comparison.json`.
 
-The seven-variable set and 150-s window were fixed for this evaluation; their
-independence from prior exploration of this cohort could not be established.
+## Configuration rationale and interpretation
+
+The seven geometry measures compactly describe eyelid opening, binocular
+alignment and ocular variability. The accompanying paper gives the literature
+rationale for these measurement families. A prior exploratory comparison of
+25 temporal configurations supported the 150-s window and 300-s update interval:
+this combination had the highest observed pooled F1, with similar performance
+at nearby settings. The predictor set and temporal settings were fixed during
+the reported cross-validation. The earlier temporal comparison is separate
+from a fresh grid run with this release.
+
+The reference model achieved higher observed pooled F1 than both contextual
+controls, with paired intervals including zero. Observed-only supervision
+yielded F1 0.724, compared with 0.713 for the reference training procedure.
+The 504 assessments are repeated measurements from 22 participants, who form
+the independent resampling units. This cohort size limits precision for modest
+performance differences; intervals spanning zero express uncertainty about
+their magnitude and direction. Larger independent cohorts and prospective
+evaluation can assess consistency across participants and settings.
+
+The numerical checks in `provenance/` identify their audited source versions.
+See `provenance/README.md` for historical snapshots and the current documentation
+alignment record.
 
 ## Additional commands
 

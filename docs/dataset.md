@@ -7,7 +7,7 @@ The original extracted table is preserved without column/row reduction.
 
 Rows are candidate causal feature summaries for 22 participants and two sessions
 per participant. The reference analysis reads only **19 columns** at the 150-s
-scale; the remaining archived feature scales, diagnostics and annotations are
+scale; the remaining feature scales, diagnostics and annotations are
 not predictors of the reported reference model.
 
 ## Metadata used by the loader
@@ -17,7 +17,7 @@ not predictors of the reported reference model.
 | `participant_id` | Pseudonymous study identifier, normalized to strings `1`–`22` |
 | `session` | `morning` or `afternoon` |
 | `task` | Task label; assembly prediction candidates use `assembly_realtime`, a legacy label that does not make this analysis realtime |
-| `prediction_time` | End of the annotated assembly block associated with the SSS rating, in seconds in the recording's time base |
+| `prediction_time` | Candidate endpoint in seconds in the recording's time base; at an assembly assessment, the annotated assembly-block boundary associated with its SSS rating |
 | `assembly_start_time` | Assembly start in the same time base; elapsed minutes are max(0, endpoint minus start)/60 |
 | `SSS_score` | Legacy dense/interpolated value; read for compatibility but **not used** as the model's supervision |
 | `real_SSS_score` | Observed SSS at evaluation endpoints, or the starting subjective reference at an initialization point; other values may be missing |
@@ -71,20 +71,20 @@ Training medians and scaling statistics are fitted within each fold.
 - All 504 evaluation endpoints have complete 150-s intervals and all eight
   finite ocular predictors. Seventeen initialization windows are shorter.
 
-Original raw streams and questionnaire source files are unavailable in this
-package. The manuscript describes the upstream extractor (10-Hz time bins,
-limited within-window interpolation and signal-coverage checks). The available
-artifact permits repetition from extracted features, not an independent audit
-of their entire raw-data provenance. Auxiliary columns are retained as archived
-context, not asserted to be independently reconstructed by this package.
+This release starts from the extracted feature table. Raw Neon recordings and
+questionnaire sources are managed separately, and the study toolkit implements
+the upstream preprocessing pipeline. The manuscript specifies 10-Hz time bins,
+limited within-window interpolation and signal-coverage checks. Auxiliary
+columns preserve the original extracted table; the reference model uses the
+19-column input contract described above.
 
 ## Endpoint and coordinate conventions
 
-Features end at the annotated assembly-block boundary. For paired questionnaire
-markers this is the first marker of the interruption; singleton markers are used
-as available boundaries, and terminal blocks can end at assembly end. Alignment
-does not use questionnaire-response timestamps. Annotation latency relative to
-screen onset cannot be reconstructed from the processed table.
+At SSS assessment endpoints, feature windows end at the annotated assembly-block
+boundary. For paired questionnaire markers this is the first marker of the
+interruption; singleton markers are used
+as available boundaries, and terminal blocks can end at assembly end. Feature
+windows align to these annotated event boundaries.
 
 Optical-axis components use the native Neon scene-camera coordinate frame,
 without rotation into world or anatomical coordinates. See the

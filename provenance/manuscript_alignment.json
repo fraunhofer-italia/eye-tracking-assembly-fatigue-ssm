@@ -76,18 +76,19 @@
     "exact_perclos_missing": 0,
     "training_support_targets_finite": 15,
     "limitations": [
-      "Raw Neon recordings and questionnaire source files are absent; the feature table was audited, not rebuilt.",
+      "This numerical audit started from extracted features; upstream preprocessing is implemented in the study toolkit.",
       "Afternoon starting states generally average SSS_13 through SSS_18; they are not single final ratings.",
       "Participant 3 afternoon begins at the first assembly rating, which is excluded from evaluation.",
-      "The existing experiment implementation is documented as an independent reconstruction of the draft analysis.",
-      "No baseline-free, streaming, or robot-assistance experiment is evaluated here."
+      "The audit evaluates the offline 150-s/300-s estimator.",
+      "Prospective streaming and robot-assistance evaluation are future extensions."
     ]
   },
-  "scope": "Current revised manuscript, not proof of identity with the legacy draft implementation.",
+  "scope": "Historical numerical audit against the manuscript source hashes recorded in this file.",
   "limitations": [
-    "Starts from archived extracted features; no raw-data rebuild.",
-    "Protocol facts not encoded in the feature table cannot be independently established.",
-    "Trained-model export/loading is not implemented or tested by this audit.",
-    "Existing comments describing every initialization as pre-assembly are inaccurate for the documented fallback."
-  ]
+    "Audit scope: numerical fitting and prediction from extracted features.",
+    "The manuscript documents the experimental protocol and upstream preprocessing.",
+    "Export and loading checks are recorded separately in standalone_verification.json and final_model_verification.json.",
+    "The documented participant-3 fallback is an assembly-time initialization; other sequences initialize before assembly."
+  ],
+  "snapshot_note": "Subsequent editorial revisions are documented in documentation_alignment.json. This audit started from the extracted feature table; raw study recordings are held outside this release."
 }

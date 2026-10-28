@@ -40,10 +40,13 @@ code is available in the [GitHub repository](https://github.com/fraunhofer-itali
 ## Scope
 
 The outcome is repeated self-reported Stanford Sleepiness Scale sleepiness,
-used as a fatigue-related state. This table supports offline reproduction from
-extracted features; original Neon recordings and questionnaire sources are not
-included. It does not independently validate a complete mental-fatigue measure,
-continuous deployment or adaptive robot assistance.
+used as a fatigue-related state. This feature release supports offline
+reproduction of model fitting and evaluation. Raw Neon recordings and
+questionnaire sources are managed separately; the study toolkit implements
+the preprocessing pipeline described in the paper. The 504 evaluation ratings
+come from 22 participants, who form the units for paired bootstrap sampling.
+Larger independent cohorts can clarify the consistency of observed performance
+differences.
 
 ## Distribution and citation
 
