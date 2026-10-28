@@ -61,6 +61,12 @@ contains the extracted input features. The code is available on [GitHub](https:/
 
 ## Cross-validation performance
 
+F1 is the primary measure because it balances precision and recall for detecting
+elevated sleepiness (41.3% of the ratings). Their harmonic mean summarizes
+positive-class detection through true positives, false positives and missed
+detections. Comparisons use pooled binary F1 for SSS ≥ 4; fold-mean F1 and SD
+describe between-fold variability.
+
 Across 504 held-out endpoints, reference pooled F1 is 0.713, ROC-AUC 0.787 and
 Brier score 0.188. Selective post-prediction feedback gives F1 0.817, ROC-AUC
 0.894 and Brier score 0.123. These scores belong to the five held-out fits, not

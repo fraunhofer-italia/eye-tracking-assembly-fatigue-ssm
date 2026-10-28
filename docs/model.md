@@ -47,6 +47,24 @@ The numerical optimizer uses at most 70 Newton updates, gradient curvature floor
 before conversion to logits. There are 128 disclosures across 44 sessions.
 The global fitted pipelines remain fixed.
 
+## Evaluation measures
+
+F1 is the primary classification measure because the task focuses on identifying
+elevated sleepiness while balancing precision and recall. Elevated-sleepiness
+ratings account for 41.3% of evaluation endpoints, with prevalence varying across
+folds. The positive class is SSS ≥ 4; binary positive-class F1 is the harmonic
+mean of precision and recall:
+
+`F1 = 2*TP / (2*TP + FP + FN)`
+
+TP, FP and FN denote true positives, false positives and false negatives. This
+summarizes positive-class detection, accounting for both false alarms and missed
+detections. All paired comparisons use the same assessment endpoints. Accuracy,
+precision, recall and specificity provide complementary descriptions of the
+classifications; ROC-AUC, average precision and Brier score assess ranking and
+probability error. See [Saito and Rehmsmeier (2015)](https://doi.org/10.1371/journal.pone.0118432)
+for the precision/recall and F-score definitions.
+
 Both sessions of a participant remain in the same fold; see `config/folds.json`.
 Mean fold F1 and sample SD describe between-fold variability. Comparisons and
 participant-bootstrap inference use pooled F1. ROC-AUC, average precision and

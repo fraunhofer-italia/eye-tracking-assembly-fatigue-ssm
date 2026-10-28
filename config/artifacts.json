@@ -8,7 +8,7 @@
     },
     "model": {
       "repo_id": "fhi/eye-tracking-assembly-fatigue-ssm",
-      "revision": "67101ab9a221b93aeefd815e0ee83a9c3b3e47fb",
+      "revision": "ee91dcd3e87262d2b1bebe42933c2e9490d242d0",
       "organization_url": "https://huggingface.co/fhi"
     }
   },

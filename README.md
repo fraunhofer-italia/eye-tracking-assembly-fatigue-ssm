@@ -45,7 +45,8 @@ fatigue-study evaluate
 
 Reference pooled F1 is **0.713**; feedback-assisted F1 is **0.817**, with similar
 observed F1 (**0.819**) for SSS persistence. Recent subjective assessments were
-informative. Comparisons use participant-bootstrap intervals across 22 people;
+informative. F1 balances precision and recall for elevated sleepiness (41.3%
+of ratings). Comparisons use participant-bootstrap intervals across 22 people;
 see [model and validation details](docs/model.md).
 
 ## Use the final offline model
