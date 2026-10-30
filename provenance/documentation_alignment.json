@@ -13,8 +13,8 @@
   },
   "manuscript_source_sha256": {
     "manuscript.tex": "93faa7eebc5fd3286d233dde5884f4644855bf75f5d77c7341db015fd477e5ea",
-    "abstract.tex": "e7de94e579f7103778b23e153a2a1224f29981d13a935a30eb748a90314698a6",
-    "introduction.tex": "f4fcf5ed0ef0efad40f0b8659add8136a04e770b2c0224b4a0f94afccec9ad19",
+    "abstract.tex": "f3ca835060d7feae2bc01f84d114b0258dc3083731058e2468a72fac0c3d089d",
+    "introduction.tex": "6915f10ded61dbe1c566fac5af925aa9ebc7411a445bacbe31231bac13583750",
     "related_work.tex": "80660bd662cb05ec9ed2bb657a6ef05216cab546da97da2c7fa32ee17ae655c1",
     "methods.tex": "6b67af34bede43b4af2a6b5784f0695d2a8dda5c96461a9ecd0fb80653a82f05",
     "model_settings.tex": "2d4d20c51fc1c96e20733ecedd18e2c4e835d15ce9ff9fb4a0cb76a698a4d8ba",
@@ -22,11 +22,11 @@
     "discussion.tex": "6f67c3059c2b2a8fa3965bca01f3f3e2ea063e1f98aa444e691dda8accfade01"
   },
   "documentation_sha256": {
-    "README.md": "a92c15f0eebe035ea48933a799ac7ed5f36b6954e94a11c1581b279322618dec",
-    "docs/model.md": "14c9bbc6ccc1520f88f7a903c172b74c4971de5c156364c523895c88919dfa0a",
-    "docs/dataset.md": "bbc2f92a7d6f5ea979e14a9a7831b65f98ba0405c8885507b37ad79108ac3b53",
-    "release/hf_model/README.md": "29c5f3394cb485293988316bd19f275dcdac7db47111efcdd24053a758354ede",
-    "release/hf_dataset/README.md": "3257a6af08cb6ed4194fc16b14221b6aa1d39ddd2824bf6e0eaa04ff60a26aac",
+    "README.md": "bc1f5dcaacbb9ea3d9356ed08865a1ac3b72ecdc870ed0258c1b6b49beab2a10",
+    "docs/model.md": "c310b9eaf71c1080c13c71caf4c75b153e958ac78b8073f02c26ca3c00b642ef",
+    "docs/dataset.md": "347b442c230f2999589d02f84c740d2bc7bd171b61591925f06c8fcb412a665f",
+    "release/hf_model/README.md": "af1e281a6a9c3ddc2576e2e11016705150c66b4bb325d431ac4ae3e04e02c8e8",
+    "release/hf_dataset/README.md": "b1346bf1823e29652ed36e9f9db94f6066a52ff6c541db9e5fde9953492e2d47",
     "provenance/README.md": "c5629099e912e61e8b2c06ef5be0d5caf61c94009a106dbca6dac232b0acdeb4"
   },
   "reference_configuration": {
@@ -43,7 +43,7 @@
     "persistence": 0.819
   },
   "model_terminology": {
-    "full_name": "recursive state-space model (SSM)",
+    "full_name": "state-space model (SSM)",
     "primary_condition": "reference SSM",
     "secondary_condition": "SSM with subjective feedback",
     "implementation_identifiers_unchanged": true

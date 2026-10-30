@@ -1,6 +1,6 @@
 # Model and evaluation
 
-The recursive state-space model (SSM) predicts SSS-defined sleepiness during
+The state-space model (SSM) predicts SSS-defined sleepiness during
 manual assembly. Its parameters are learned from training participants and
 applied to held-out participants using individual ocular references and initial
 SSS ratings. Evaluation is offline. It provides a reproducible basis for further

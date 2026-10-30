@@ -13,7 +13,7 @@ tags:
 Complete fitted models accompanying *Estimating Operator Fatigue During Manual
 Assembly with a Recursive State-Space Model of Wearable Eye-Tracking Signals*.
 
-The recursive state-space model (SSM) learns shared parameters from training
+The state-space model (SSM) learns shared parameters from training
 participants and uses individual ocular references and initial SSS ratings.
 Evaluation is offline.
 

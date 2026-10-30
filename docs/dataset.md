@@ -6,7 +6,7 @@ columns**. SHA-256:
 The original extracted table is preserved without column/row reduction.
 
 Rows are candidate causal feature summaries for 22 participants and two sessions
-per participant. The reference recursive state-space model (SSM) reads only
+per participant. The reference state-space model (SSM) reads only
 **19 columns** at the 150-s
 scale; the remaining feature scales, diagnostics and annotations are
 not predictors of the reported reference SSM.

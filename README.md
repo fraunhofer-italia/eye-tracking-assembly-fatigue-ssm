@@ -3,7 +3,7 @@
 Code for *Estimating Operator Fatigue During Manual Assembly with a Recursive
 State-Space Model of Wearable Eye-Tracking Signals*.
 
-The offline recursive state-space model (SSM) estimates self-reported sleepiness
+The offline state-space model (SSM) estimates self-reported sleepiness
 (Stanford Sleepiness Scale, SSS ≥ 4) from 150-second ocular summaries at
 approximately 300-second intervals.
 The study includes 22 participants, 44 sessions and 504 evaluation endpoints.
