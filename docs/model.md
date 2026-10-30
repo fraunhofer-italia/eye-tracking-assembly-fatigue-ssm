@@ -1,8 +1,9 @@
 # Model and evaluation
 
-The estimator predicts SSS-defined sleepiness during manual assembly. It is a
-population-trained offline model using participant-specific initial ocular
-and subjective references. It provides a reproducible basis for further
+The recursive state-space model (SSM) predicts SSS-defined sleepiness during
+manual assembly. Its parameters are learned from training participants and
+applied to held-out participants using individual ocular references and initial
+SSS ratings. Evaluation is offline. It provides a reproducible basis for further
 evaluation of sleepiness monitoring during manual work.
 
 ## Fitted components
@@ -32,10 +33,10 @@ uses only observed assembly endpoints and no additional inner cross-validation.
 
 | Name | Description |
 | --- | --- |
-| `reference` | Complete model, subsequent test SSS withheld after initialization |
+| `reference` | Reference SSM; subsequent test SSS withheld after initialization |
 | `context_only` | Balanced logistic classifier on [afternoon, elapsed_minutes, afternoon*elapsed_minutes] |
 | `observed_only_supervision` | Same reference architecture and sequence points, with continuous supervision restricted to finite observed starting references and ratings |
-| `online_both_048` | Same fitted reference parameters, with state reset and probability-offset adaptation after selected ratings |
+| `online_both_048` | SSM with subjective feedback; same fitted parameters, with state reset and probability-offset adaptation after selected ratings |
 | `initial_state_temporal_context_no_ocular` | Initial SSS, learned autoregressive Extra Trees transition and contextual classifier; no ocular inputs or observation/fusion update |
 
 Feedback is disclosed at the first, fifth and ninth eligible assessment of each
@@ -45,7 +46,7 @@ cross-entropy plus 0.1*offset² over accumulated feedback, bounded to [-6,6].
 The numerical optimizer uses at most 70 Newton updates, gradient curvature floor
 1e-8 and change tolerance 1e-10. Probabilities are clipped to [1e-9,1-1e-9]
 before conversion to logits. There are 128 disclosures across 44 sessions.
-The global fitted pipelines remain fixed.
+The trained SSM components remain fixed.
 
 ## Evaluation measures
 
@@ -88,7 +89,7 @@ inference, since feedback updates sequence state without changing global fitted
 parameters. Personal sequence state is reconstructed when `predict()` processes
 a chain; the file is not a live session checkpoint.
 
-## Final all-participant inference model
+## Final all-participant inference SSM
 
 `reference_all_participants.joblib` is fitted separately on all 22 participants,
 44 sessions and 563 retained sequence points with the same reference settings.
@@ -121,7 +122,7 @@ SSS ≥ 4 supplies its class; the last available ordinal SSS supplies its ROC-AU
 ranking score. It is not a calibrated probability, so no Brier score is assigned.
 
 Persistence achieves pooled F1 0.819, accuracy 0.853 and ROC-AUC 0.919. For the
-feedback-assisted model minus persistence, pooled ΔF1 is -0.002 with paired
+SSM with subjective feedback minus persistence, pooled ΔF1 is -0.002 with paired
 participant-bootstrap 95% interval [-0.039, 0.033]. The two approaches had
 similar observed pooled F1, highlighting the predictive value of recent
 subjective assessments. The no-ocular control has F1 0.659; reference minus
@@ -139,7 +140,7 @@ at nearby settings. The predictor set and temporal settings were fixed during
 the reported cross-validation. The earlier temporal comparison is separate
 from a fresh grid run with this release.
 
-The reference model achieved higher observed pooled F1 than both contextual
+The reference SSM achieved higher observed pooled F1 than both contextual
 controls, with paired intervals including zero. Observed-only supervision
 yielded F1 0.724, compared with 0.713 for the reference training procedure.
 The 504 assessments are repeated measurements from 22 participants, who form

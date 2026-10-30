@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-28",
-  "scope": "Documentation alignment with the current manuscript; model fitting was not rerun.",
+  "date": "2026-10-30",
+  "scope": "SSM naming alignment with the current manuscript; numerical checks are limited to the reported metrics and unchanged model/data artifacts. Model fitting was not rerun.",
   "checks": {
     "model_sources_match_toolkit": true,
     "dataset_and_model_artifacts_unchanged": true,
@@ -12,19 +12,21 @@
     "expected_numerical_outputs_unchanged": true
   },
   "manuscript_source_sha256": {
-    "manuscript.tex": "cb2d3418aeac7e8d46506aa29fd081684b92b7882204fe871103789ff53d5d50",
-    "abstract.tex": "3c2c2588f6c9190068acbb1c3c83bae763c7e5f6c6a5c7e0867b2259a5554a66",
-    "methods.tex": "a38674765063d25aefc6c98e2360c5bdfbd25d965701c6fa021aa1d151814e28",
-    "model_settings.tex": "7e75062e284dc7f1824c33166f6e0968d7916131e5265e6105522bb31637b7c2",
-    "results.tex": "6084475bdc8ea180d0966141a698bcbdfcb7b57ba5a4f1dd897f62dfede24dd0",
-    "discussion.tex": "3042ad87df181df2962c9e4d121ed8a39a0d3b525931a564b1844d1d8345676c"
+    "manuscript.tex": "93faa7eebc5fd3286d233dde5884f4644855bf75f5d77c7341db015fd477e5ea",
+    "abstract.tex": "e7de94e579f7103778b23e153a2a1224f29981d13a935a30eb748a90314698a6",
+    "introduction.tex": "f4fcf5ed0ef0efad40f0b8659add8136a04e770b2c0224b4a0f94afccec9ad19",
+    "related_work.tex": "80660bd662cb05ec9ed2bb657a6ef05216cab546da97da2c7fa32ee17ae655c1",
+    "methods.tex": "6b67af34bede43b4af2a6b5784f0695d2a8dda5c96461a9ecd0fb80653a82f05",
+    "model_settings.tex": "2d4d20c51fc1c96e20733ecedd18e2c4e835d15ce9ff9fb4a0cb76a698a4d8ba",
+    "results.tex": "221ce8cc981e9c8dbda29833b6802e7638b30a703935bc174fbab65423eb696c",
+    "discussion.tex": "6f67c3059c2b2a8fa3965bca01f3f3e2ea063e1f98aa444e691dda8accfade01"
   },
   "documentation_sha256": {
-    "README.md": "62889435574228feded86b382431f1333c718f7e4436457a8738bbcdd74cb59c",
-    "docs/model.md": "5640ae4b2de4a3f47025a6379ee4ad8eb902cc6c0618ea54cc80da9074f7eda2",
-    "docs/dataset.md": "21b0068f416f4331f573bf37c44aa686bc64e1b9a8c6b72f63e24ff4558addc0",
-    "release/hf_model/README.md": "2fe4877e1325fcf2191062e1298bb37474f967ced3f28d57fcbdda7b45b9c24d",
-    "release/hf_dataset/README.md": "7374ab66c71cba5e0f82348d860deb749868ae81a0dfb851e6504075082007bd",
+    "README.md": "a92c15f0eebe035ea48933a799ac7ed5f36b6954e94a11c1581b279322618dec",
+    "docs/model.md": "14c9bbc6ccc1520f88f7a903c172b74c4971de5c156364c523895c88919dfa0a",
+    "docs/dataset.md": "bbc2f92a7d6f5ea979e14a9a7831b65f98ba0405c8885507b37ad79108ac3b53",
+    "release/hf_model/README.md": "29c5f3394cb485293988316bd19f275dcdac7db47111efcdd24053a758354ede",
+    "release/hf_dataset/README.md": "3257a6af08cb6ed4194fc16b14221b6aa1d39ddd2824bf6e0eaa04ff60a26aac",
     "provenance/README.md": "c5629099e912e61e8b2c06ef5be0d5caf61c94009a106dbca6dac232b0acdeb4"
   },
   "reference_configuration": {
@@ -40,5 +42,10 @@
     "feedback": 0.817,
     "persistence": 0.819
   },
-  "temporal_rationale": "The manuscript reports a prior exploratory comparison of 25 temporal configurations; no new temporal grid was run for this documentation update."
+  "model_terminology": {
+    "full_name": "recursive state-space model (SSM)",
+    "primary_condition": "reference SSM",
+    "secondary_condition": "SSM with subjective feedback",
+    "implementation_identifiers_unchanged": true
+  }
 }

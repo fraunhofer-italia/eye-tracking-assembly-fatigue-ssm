@@ -17,8 +17,8 @@ Recursive State-Space Model of Wearable Eye-Tracking Signals*.
 ## Contents
 
 The original extracted table contains 15,749 candidate rows and 742 columns,
-from 22 participants and 44 morning/afternoon sessions. The reported reference
-analysis uses 150-s ocular windows and a nominal 300-s assessment cadence,
+from 22 participants and 44 morning/afternoon sessions. The reference recursive
+state-space model (SSM) uses 150-s ocular windows and a nominal 300-s assessment cadence,
 retaining 44 initialization points, 504 evaluation endpoints and 15 support
 points. There are 208 elevated-sleepiness outcomes (SSS ≥ 4).
 

@@ -13,9 +13,13 @@ tags:
 Complete fitted models accompanying *Estimating Operator Fatigue During Manual
 Assembly with a Recursive State-Space Model of Wearable Eye-Tracking Signals*.
 
+The recursive state-space model (SSM) learns shared parameters from training
+participants and uses individual ocular references and initial SSS ratings.
+Evaluation is offline.
+
 ## Files and intended use
 
-**Final model for inference:** `reference_all_participants.joblib`, trained on
+**Final SSM for inference:** `reference_all_participants.joblib`, trained on
 all 22 participants and 44 sessions with the paper's 150 s / 300 s reference
 configuration. Its matching `.manifest.json` and `.verification.json` identify
 the full-data fit and record serialization and fresh-process checks. No
@@ -54,7 +58,7 @@ they are not standalone executables. Load only trusted serialized files.
 
 The same bundle supports `feedback="both"`: reveal the first, fifth and ninth
 eligible session ratings after their predictions, update state and session logit
-offset, and keep all fitted population parameters fixed.
+offset, and keep the trained SSM components fixed.
 
 The [dataset repository](https://huggingface.co/datasets/fhi/eye-tracking-assembly-fatigue-ssm)
 contains the extracted input features. The code is available on [GitHub](https://github.com/fraunhofer-italia/eye-tracking-assembly-fatigue-ssm).
@@ -67,19 +71,19 @@ positive-class detection through true positives, false positives and missed
 detections. Comparisons use pooled binary F1 for SSS ≥ 4; fold-mean F1 and SD
 describe between-fold variability.
 
-Across 504 held-out endpoints, reference pooled F1 is 0.713, ROC-AUC 0.787 and
-Brier score 0.188. Selective post-prediction feedback gives F1 0.817, ROC-AUC
+Across 504 held-out endpoints, the reference SSM achieves pooled F1 0.713, ROC-AUC 0.787 and
+Brier score 0.188. The SSM with subjective feedback achieves F1 0.817, ROC-AUC
 0.894 and Brier score 0.123. These scores belong to the five held-out fits, not
 an independent test of the final all-participant model.
 Carrying forward the last available SSS with the same feedback schedule gives
-F1 0.819, accuracy 0.853 and ROC-AUC 0.919. The feedback-assisted model and this
+F1 0.819, accuracy 0.853 and ROC-AUC 0.919. The SSM with subjective feedback and this
 comparator achieved similar observed pooled F1 (paired difference -0.002,
 95% interval [-0.039, 0.033]), highlighting the predictive value of recent
 subjective assessments.
 Serialization/reloading was checked for exact
 prediction equality, including loading in a fresh Python process.
 
-The outcome is SSS-defined self-reported sleepiness. The reference model had
+The outcome is SSS-defined self-reported sleepiness. The reference SSM had
 higher observed pooled F1 than the contextual controls, with paired intervals
 including zero. The 504 assessments come from 22 participant resampling units,
 which limits precision for modest performance differences. The seven geometry

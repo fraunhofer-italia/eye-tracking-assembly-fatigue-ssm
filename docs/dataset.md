@@ -6,9 +6,10 @@ columns**. SHA-256:
 The original extracted table is preserved without column/row reduction.
 
 Rows are candidate causal feature summaries for 22 participants and two sessions
-per participant. The reference analysis reads only **19 columns** at the 150-s
+per participant. The reference recursive state-space model (SSM) reads only
+**19 columns** at the 150-s
 scale; the remaining feature scales, diagnostics and annotations are
-not predictors of the reported reference model.
+not predictors of the reported reference SSM.
 
 ## Metadata used by the loader
 
@@ -75,7 +76,7 @@ This release starts from the extracted feature table. Raw Neon recordings and
 questionnaire sources are managed separately, and the study toolkit implements
 the upstream preprocessing pipeline. The manuscript specifies 10-Hz time bins,
 limited within-window interpolation and signal-coverage checks. Auxiliary
-columns preserve the original extracted table; the reference model uses the
+columns preserve the original extracted table; the reference SSM uses the
 19-column input contract described above.
 
 ## Endpoint and coordinate conventions

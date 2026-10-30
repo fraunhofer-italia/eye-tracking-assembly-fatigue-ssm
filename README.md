@@ -3,8 +3,9 @@
 Code for *Estimating Operator Fatigue During Manual Assembly with a Recursive
 State-Space Model of Wearable Eye-Tracking Signals*.
 
-The offline model estimates self-reported sleepiness (Stanford Sleepiness Scale,
-SSS ≥ 4) from 150-second ocular summaries at approximately 300-second intervals.
+The offline recursive state-space model (SSM) estimates self-reported sleepiness
+(Stanford Sleepiness Scale, SSS ≥ 4) from 150-second ocular summaries at
+approximately 300-second intervals.
 The study includes 22 participants, 44 sessions and 504 evaluation endpoints.
 
 ## Install and download
@@ -43,13 +44,14 @@ To replay the saved reference models and feedback/persistence comparison:
 fatigue-study evaluate
 ```
 
-Reference pooled F1 is **0.713**; feedback-assisted F1 is **0.817**, with similar
+The reference SSM achieves pooled F1 **0.713**; the SSM with subjective feedback
+achieves **0.817**, with similar
 observed F1 (**0.819**) for SSS persistence. Recent subjective assessments were
 informative. F1 balances precision and recall for elevated sleepiness (41.3%
 of ratings). Comparisons use participant-bootstrap intervals across 22 people;
 see [model and validation details](docs/model.md).
 
-## Use the final offline model
+## Use the final offline SSM
 
 ```python
 from paper_bundle import load_model
@@ -61,7 +63,7 @@ chain = build_sss_chain(prepare_window(data, 150), 300)
 predictions = model.predict(chain, feedback="none")
 ```
 
-The final model was fitted on all participants; this example is inference on the
+The final SSM was fitted on all participants; this example is inference on the
 study cohort, not a held-out evaluation. The five `reference_fold_N.joblib` files
 reproduce cross-validation; they are not an ensemble. New-participant inputs
 require the same feature definitions and initial subjective/ocular references.

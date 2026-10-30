@@ -3,12 +3,12 @@
   "huggingface": {
     "dataset": {
       "repo_id": "fhi/eye-tracking-assembly-fatigue-ssm",
-      "revision": "c7c59379e8e4942f3fedca1297a0c09adc6fa276",
+      "revision": "e25dfafa30d795a8f70a7888eabd0d0280e99827",
       "organization_url": "https://huggingface.co/fhi"
     },
     "model": {
       "repo_id": "fhi/eye-tracking-assembly-fatigue-ssm",
-      "revision": "ee91dcd3e87262d2b1bebe42933c2e9490d242d0",
+      "revision": "db4d711798af4ffa204e8dab6ca442a93449ecd8",
       "organization_url": "https://huggingface.co/fhi"
     }
   },
