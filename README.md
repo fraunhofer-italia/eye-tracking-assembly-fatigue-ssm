@@ -1,6 +1,6 @@
 # Eye Tracking for Assembly Fatigue: SSM
 
-Code for *Estimating Operator Fatigue During Manual Assembly with a Recursive
+Code for *Estimating Operator Fatigue During Manual Assembly with a
 State-Space Model of Wearable Eye-Tracking Signals*.
 
 The offline state-space model (SSM) estimates self-reported sleepiness
@@ -34,11 +34,13 @@ fatigue-study reproduce --check-models
 ```
 
 This trains the five participant-held-out folds and checks the reference,
-context-only, no-ocular, observed-only-supervision and feedback analyses against
-`expected/`. It also verifies the last-available-SSS persistence comparator and
+context-only, SSM without ocular inputs, observed-only supervision and SSM with
+subjective feedback analyses against `expected/`. It also verifies the
+last-rating persistence comparator and
 paired participant-bootstrap intervals. Outputs go to `results/reproduce/`.
 
-To replay the saved reference models and feedback/persistence comparison:
+To replay the saved reference models and the comparison between the SSM with
+subjective feedback and last-rating persistence:
 
 ```bash
 fatigue-study evaluate
@@ -46,7 +48,7 @@ fatigue-study evaluate
 
 The reference SSM achieves pooled F1 **0.713**; the SSM with subjective feedback
 achieves **0.817**, with similar
-observed F1 (**0.819**) for SSS persistence. Recent subjective assessments were
+observed F1 (**0.819**) for last-rating persistence. Recent subjective assessments were
 informative. F1 balances precision and recall for elevated sleepiness (41.3%
 of ratings). Comparisons use participant-bootstrap intervals across 22 people;
 see [model and validation details](docs/model.md).
@@ -68,7 +70,8 @@ study cohort, not a held-out evaluation. The five `reference_fold_N.joblib` file
 reproduce cross-validation; they are not an ensemble. New-participant inputs
 require the same feature definitions and initial subjective/ocular references.
 This package starts from processed features and is separate from the 30-second
-real-time prototype; raw recordings are not included.
+real-time prototype. Because of their size, raw eye-tracking recordings are not
+included; they are available from the authors on request.
 
 [Input dictionary](docs/dataset.md) · [Further commands](docs/model.md) ·
 [Citation](CITATION.cff) · [MIT License](LICENSE) · [Attribution](NOTICE.md)

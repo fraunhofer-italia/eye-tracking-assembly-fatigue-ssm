@@ -12,7 +12,7 @@ tags:
 # Eye Tracking for Assembly Fatigue: SSM — Dataset
 
 Dataset accompanying *Estimating Operator Fatigue During Manual Assembly with a
-Recursive State-Space Model of Wearable Eye-Tracking Signals*.
+State-Space Model of Wearable Eye-Tracking Signals*.
 
 ## Contents
 
@@ -40,10 +40,11 @@ code is available in the [GitHub repository](https://github.com/fraunhofer-itali
 
 The outcome is repeated self-reported Stanford Sleepiness Scale sleepiness,
 used as a fatigue-related state. This feature release supports offline
-reproduction of model fitting and evaluation. Raw Neon recordings and
-questionnaire sources are managed separately; the study toolkit implements
-the preprocessing pipeline described in the paper. The 504 evaluation ratings
-come from 22 participants, who form the units for paired bootstrap sampling.
+reproduction of model fitting and evaluation. Because of their size, raw Neon
+recordings and questionnaire sources are not included; they are available from
+the authors on request. The preprocessing pipeline is described in the paper.
+The 504 evaluation ratings come from 22 participants, who form the units for
+paired bootstrap sampling.
 Larger independent cohorts can clarify the consistency of observed performance
 differences.
 

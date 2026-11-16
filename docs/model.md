@@ -31,13 +31,13 @@ uses only observed assembly endpoints and no additional inner cross-validation.
 
 ## Reported conditions
 
-| Name | Description |
-| --- | --- |
-| `reference` | Reference SSM; subsequent test SSS withheld after initialization |
-| `context_only` | Balanced logistic classifier on [afternoon, elapsed_minutes, afternoon*elapsed_minutes] |
-| `observed_only_supervision` | Same reference architecture and sequence points, with continuous supervision restricted to finite observed starting references and ratings |
-| `online_both_048` | SSM with subjective feedback; same fitted parameters, with state reset and probability-offset adaptation after selected ratings |
-| `initial_state_temporal_context_no_ocular` | Initial SSS, learned autoregressive Extra Trees transition and contextual classifier; no ocular inputs or observation/fusion update |
+| Name | Paper name | Description |
+| --- | --- | --- |
+| `reference` | Reference SSM | Reference SSM; subsequent test SSS withheld after initialization |
+| `context_only` | Context only | Balanced logistic classifier on [afternoon, elapsed_minutes, afternoon*elapsed_minutes] |
+| `observed_only_supervision` | Observed-only supervision | Same reference architecture and sequence points, with continuous supervision restricted to finite observed starting references and ratings |
+| `online_both_048` | SSM with subjective feedback | SSM with subjective feedback; same fitted parameters, with state reset and probability-offset adaptation after selected ratings |
+| `initial_state_temporal_context_no_ocular` | SSM without ocular inputs | Initial SSS, learned autoregressive Extra Trees transition and contextual classifier; no ocular inputs or observation/fusion update |
 
 Feedback is disclosed at the first, fifth and ninth eligible assessment of each
 session, **after its own prediction**. A state reset uses the standardized
@@ -113,7 +113,7 @@ The original `.joblib` hashes and configuration are recorded in
 `config/model_manifest.json` and `config/artifacts.json`. Preserve these code
 modules and the pinned scientific Python versions with the files.
 
-## Persistence comparator
+## Last-rating persistence
 
 The comparator starts from the same initial session SSS and carries it forward,
 replacing it only after the first, fifth and ninth assessment predictions have
@@ -121,12 +121,12 @@ been scored. The same 128 disclosures are used on the same 504 endpoints.
 SSS ≥ 4 supplies its class; the last available ordinal SSS supplies its ROC-AUC
 ranking score. It is not a calibrated probability, so no Brier score is assigned.
 
-Persistence achieves pooled F1 0.819, accuracy 0.853 and ROC-AUC 0.919. For the
-SSM with subjective feedback minus persistence, pooled ΔF1 is -0.002 with paired
+Last-rating persistence achieves pooled F1 0.819, accuracy 0.853 and ROC-AUC 0.919. For the
+SSM with subjective feedback minus last-rating persistence, pooled ΔF1 is -0.002 with paired
 participant-bootstrap 95% interval [-0.039, 0.033]. The two approaches had
 similar observed pooled F1, highlighting the predictive value of recent
-subjective assessments. The no-ocular control has F1 0.659; reference minus
-control is 0.054 with interval [-0.050, 0.160]. Full-precision expectations are
+subjective assessments. The SSM without ocular inputs has F1 0.659; reference
+minus this model is 0.054 with interval [-0.050, 0.160]. Full-precision expectations are
 included in `expected/`; each evaluation writes `persistence_comparison.json`.
 
 ## Configuration rationale and interpretation
@@ -152,6 +152,23 @@ evaluation can assess consistency across participants and settings.
 The numerical checks in `provenance/` identify their audited source versions.
 See `provenance/README.md` for historical snapshots and the current documentation
 alignment record.
+
+## Contribution of individual geometry measures
+
+The exploratory per-measure analysis in the paper (Section 4.3) removes each of
+the seven geometry measures in turn from the Ridge observation model, refits all
+five folds and compares pooled F1 with the reference SSM using the paired
+participant bootstrap. It also reports the standardized Ridge coefficients of the
+full model across the five training folds.
+
+```bash
+python scripts/per_measure.py --check
+```
+
+The script uses the audited modules in `src/` without modifying them and checks
+the result against `expected/per_measure.csv`. Removing the left eyelid-aperture
+mean gives the largest decrease (pooled F1 0.713 to 0.656); no single-measure
+difference has a 95% interval excluding zero.
 
 ## Additional commands
 

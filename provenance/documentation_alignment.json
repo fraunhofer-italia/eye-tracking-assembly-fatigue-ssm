@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-30",
-  "scope": "SSM naming alignment with the current manuscript; numerical checks are limited to the reported metrics and unchanged model/data artifacts. Model fitting was not rerun.",
+  "date": "2026-11-16",
+  "scope": "Alignment with the manuscript version approved after internal review: title, comparator names, raw-data availability and the per-measure analysis (paper Section 4.3). Numerical checks are limited to the reported metrics, unchanged model/data artifacts and the per-measure script. Reference model fitting was not rerun.",
   "checks": {
     "model_sources_match_toolkit": true,
     "dataset_and_model_artifacts_unchanged": true,
@@ -9,25 +9,27 @@
     "current_manuscript_primary_F1_matches_expected": true,
     "current_manuscript_feedback_F1_matches_expected": true,
     "current_manuscript_persistence_F1_matches_expected": true,
-    "expected_numerical_outputs_unchanged": true
+    "expected_numerical_outputs_unchanged": true,
+    "per_measure_analysis_matches_expected": true
   },
   "manuscript_source_sha256": {
-    "manuscript.tex": "93faa7eebc5fd3286d233dde5884f4644855bf75f5d77c7341db015fd477e5ea",
-    "abstract.tex": "f3ca835060d7feae2bc01f84d114b0258dc3083731058e2468a72fac0c3d089d",
-    "introduction.tex": "6915f10ded61dbe1c566fac5af925aa9ebc7411a445bacbe31231bac13583750",
-    "related_work.tex": "80660bd662cb05ec9ed2bb657a6ef05216cab546da97da2c7fa32ee17ae655c1",
-    "methods.tex": "6b67af34bede43b4af2a6b5784f0695d2a8dda5c96461a9ecd0fb80653a82f05",
-    "model_settings.tex": "2d4d20c51fc1c96e20733ecedd18e2c4e835d15ce9ff9fb4a0cb76a698a4d8ba",
-    "results.tex": "221ce8cc981e9c8dbda29833b6802e7638b30a703935bc174fbab65423eb696c",
-    "discussion.tex": "6f67c3059c2b2a8fa3965bca01f3f3e2ea063e1f98aa444e691dda8accfade01"
+    "manuscript.tex": "317961533c35a6a33b8a2ff3e6be1880400c22e70504da30fd8efb66cac83159",
+    "abstract.tex": "e04b68568c2501e89fb5a73b43148cf8fa3df9a2a4d5a63731ad486c18f1466e",
+    "introduction.tex": "29196c1956dc28f38b371c1f7249351686c987e9fb6cc94952710735d22d3506",
+    "related_work.tex": "3c057e0580c7a0b6f30648689e801f64d9388378624c7acf53c5da713854a2dc",
+    "methods.tex": "22b79ff2906f7e63c4f9f92009955379e3813043ec3feb859507568569048dd3",
+    "model_settings.tex": "abce95890d46ea2ccc51efb6118075bff6f6023973ac34d67753b901d32d0605",
+    "results.tex": "115e7496aba7aa20778961e5455b7007ba39b8fd39c8e4b91f09519f9ca6be93",
+    "discussion.tex": "092ddcf7a9e0650ae6dc41d6b4a6302b56d98871351d8a044f650c07ddd4ad17"
   },
   "documentation_sha256": {
-    "README.md": "bc1f5dcaacbb9ea3d9356ed08865a1ac3b72ecdc870ed0258c1b6b49beab2a10",
-    "docs/model.md": "c310b9eaf71c1080c13c71caf4c75b153e958ac78b8073f02c26ca3c00b642ef",
+    "README.md": "8e6b9308e20ea43a7f6188cf586be8d11a886ad79a3d00ea7bdf3ac8a33617fb",
+    "docs/model.md": "6719cf1f0a140344f0df9e16761b09dedb000e4e88e80d23ad21e1f87f8ed611",
     "docs/dataset.md": "347b442c230f2999589d02f84c740d2bc7bd171b61591925f06c8fcb412a665f",
-    "release/hf_model/README.md": "af1e281a6a9c3ddc2576e2e11016705150c66b4bb325d431ac4ae3e04e02c8e8",
-    "release/hf_dataset/README.md": "b1346bf1823e29652ed36e9f9db94f6066a52ff6c541db9e5fde9953492e2d47",
-    "provenance/README.md": "c5629099e912e61e8b2c06ef5be0d5caf61c94009a106dbca6dac232b0acdeb4"
+    "release/hf_model/README.md": "ac4f8dfb00cf18f6275bb823c8a741c58e31b2a7c64dc4200468a7fa64457090",
+    "release/hf_dataset/README.md": "2486857e782c992f898bc9cd4ff1587d45c601ee4fc43278bf743ff30d2831f0",
+    "provenance/README.md": "13fcc220e3bf51c4efdd37ae4fa09bbf23070b58f86908adece654afea336f30",
+    "NOTICE.md": "900de0fb29ad61f18740dba25eecbd38f278534024a7a058cebe2bed9f0a8156"
   },
   "reference_configuration": {
     "window_s": 150,
@@ -47,5 +49,9 @@
     "primary_condition": "reference SSM",
     "secondary_condition": "SSM with subjective feedback",
     "implementation_identifiers_unchanged": true
+  },
+  "analysis_scripts_sha256": {
+    "scripts/per_measure.py": "85e13f40045cb3ea3101bf9518252c5b5868221e357bb495242fa9c1c7835e71",
+    "expected/per_measure.csv": "24f7865c07af7087e6bdf10fad2a7d5513fd4d21103f5c219a737dc0a484449e"
   }
 }

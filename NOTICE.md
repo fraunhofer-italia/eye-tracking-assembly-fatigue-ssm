@@ -1,7 +1,7 @@
 # Attribution and distribution
 
 This research reproduction package accompanies *Estimating Operator Fatigue
-During Manual Assembly with a Recursive State-Space Model of Wearable
+During Manual Assembly with a State-Space Model of Wearable
 Eye-Tracking Signals* by Margaret Bowen, Shengbo Kang, Leonardo Venturoso,
 Isabella Soraruf, Christoph Huber-Huber, and Marco Todescato.
 

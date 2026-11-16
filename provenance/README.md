@@ -9,6 +9,6 @@ standalone evaluation and final-fit checks. The current editorial alignment is
 recorded separately in `documentation_alignment.json`. Historical numerical
 results and audited source hashes are preserved.
 
-Raw study recordings are managed outside this feature/model release. The
-numerical audits start from the extracted table; preprocessing is implemented
-in the study toolkit and described in the manuscript.
+Because of their size, raw study recordings are not part of this feature/model
+release; they are available from the authors on request. The numerical audits
+start from the extracted table; preprocessing is described in the manuscript.
