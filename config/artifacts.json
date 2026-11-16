@@ -3,12 +3,12 @@
   "huggingface": {
     "dataset": {
       "repo_id": "fhi/eye-tracking-assembly-fatigue-ssm",
-      "revision": "ee48934ddaef53d3c9ea08741bb4dec02650df19",
+      "revision": "ee2235a8d5125a065e6943beba4a743fb0eff0db",
       "organization_url": "https://huggingface.co/fhi"
     },
     "model": {
       "repo_id": "fhi/eye-tracking-assembly-fatigue-ssm",
-      "revision": "244d3fa2beb575155dfe7e236251a8b9e497fa57",
+      "revision": "82c213220582146a10f61d6ca16464eb04de9052",
       "organization_url": "https://huggingface.co/fhi"
     }
   },
@@ -92,7 +92,7 @@
     }
   ],
   "destinations": {
-    "publication_status": "uploaded_private",
+    "publication_status": "uploaded_public",
     "github_organization": "https://github.com/fraunhofer-italia",
     "huggingface_organization": "https://huggingface.co/fhi",
     "github_repository": "https://github.com/fraunhofer-italia/eye-tracking-assembly-fatigue-ssm"
